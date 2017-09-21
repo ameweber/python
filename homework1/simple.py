@@ -1,13 +1,9 @@
-a = input("a: ")
-b = range(a+1)
-b[1] = 0
+n = input("n: ")
 lst = []
-
-i = 2
-while i <= a:
-    if b[i] != 0:
-        lst.append(b[i])
-        for j in xrange(i, a+1, i):
-            b[j] = 0
-    i += 1
+for i in xrange(2, n+1):
+    for j in xrange(2, i):
+        if i % j == 0:        
+            break
+    else:
+        lst.append(i)
 print lst
